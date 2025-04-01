@@ -1,0 +1,3 @@
+appid: "123"
+secret: "XXXXXXX"
+data_path: "/home/user_name/.../data/"

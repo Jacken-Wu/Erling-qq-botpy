@@ -1,0 +1,6 @@
+.venv/
+*.pyc
+*.log
+data/
+erling/__pycache__/
+config.yaml
