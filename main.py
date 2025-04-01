@@ -69,6 +69,13 @@ class MyClient(botpy.Client):
             await self.send(message, result)
             return None
 
+        # 更新参数
+        if content.startswith("/update"):
+            global asking, answer
+            asking, answer = erling.update_conversation(config["data_path"])
+            await self.send(message, "更新成功！")
+            return None
+
         # 聊天
         result = erling.reply_conversation(content, config["data_path"], asking, answer)
         await self.send(message, result)
