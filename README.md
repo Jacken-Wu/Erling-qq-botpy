@@ -22,12 +22,27 @@
 ## 目录
 
 [项目介绍](#项目介绍)  
+[部署](#部署)
 [二澪人设](#二澪人设)  
 
 ## 项目介绍
 
 本项目为某 VOCALOID 群的群聊机器人 python 代码。  
 使用QQ官方机器人接口，前身是 [Erling](https://github.com/Jacken-Wu/Erling)。
+
+## 部署
+
+1. 安装 Python3
+2. 安装依赖：`pip install -r requirements.txt`
+3. 申请 [QQ 机器人](https://q.qq.com/#/app/bot)，并获得 `token`
+4. 将 `config.example.yaml` 复制为 `config.yaml`，并修改其中相应的配置项，其中 `data_path` 为数据文件存放路径
+5. 在项目的根目录下运行 `python main.py` 或 `python3 main.py`
+6. 其他
+    - 你的 `data_path` 下的 `chat/trainning/text/` 中可添加文本，用于生成词向量，具体示例见其中的参考文件
+    - 你的 `data_path` 下的 `chat/trainning/conversation/` 中可添加对话语料，用于生成对话数据集，具体示例见其中的参考文件
+    - 可以运行 `generate_conversation.py` 生成词向量或对话数据集（需解除该文件中对应的注释）
+    - 生成的词向量模型文件位于 `data_path/chat/model_word2vec`，对话数据集文件位于 `data_path/chat/database_conversation.yml`
+    - 重新生成对话数据集后无需重启机器人，对机器人使用 `/update` 命令即可更新对话数据集
 
 ## 二澪人设
 

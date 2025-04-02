@@ -60,6 +60,7 @@ class MyClient(botpy.Client):
         # 查看 love
         if content.startswith("/love"):
             result = erling.get_love(user_id, config["data_path"])
+            result = f"二澪对你的love值为 {result}"
             await self.send(message, result)
             return None
 
