@@ -1,6 +1,7 @@
 .venv/
 *.pyc
 *.log
+botpy.log.*
 data/
 erling/__pycache__/
 config.yaml
