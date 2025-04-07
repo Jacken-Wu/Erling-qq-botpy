@@ -33,10 +33,10 @@ class MyClient(botpy.Client):
     async def on_group_at_message_create(self, message: GroupMessage):
         user_id = message.author.member_openid
         erling.add_love(user_id, config["data_path"])
-        print(message)
         content = message.content
         # 去掉首尾的所有空格
         content = content.strip()
+        _log.info(f"收到群消息：{content}，来自 {user_id}")
 
         # 空消息
         if content == "":
