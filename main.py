@@ -28,6 +28,7 @@ class MyClient(botpy.Client):
             msg_type=0, 
             msg_id=message.id,
             content=content)
+        _log.info(f"发送消息：{content}")
         _log.info(messageResult)
 
     async def on_group_at_message_create(self, message: GroupMessage):
