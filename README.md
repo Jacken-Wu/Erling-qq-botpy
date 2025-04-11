@@ -22,8 +22,8 @@
 ## 目录
 
 [项目介绍](#项目介绍)  
-[部署](#部署)
-[二澪人设](#二澪人设)  
+[部署](#部署)  
+[二澪人设](#二澪人设)
 
 ## 项目介绍
 
@@ -32,12 +32,13 @@
 
 ## 部署
 
-1. 安装 Python3
-2. 安装依赖：`pip install -r requirements.txt`
-3. 申请 [QQ 机器人](https://q.qq.com/#/app/bot)，并获得 `token`
-4. 将 `config.example.yaml` 复制为 `config.yaml`，并修改其中相应的配置项，其中 `data_path` 为数据文件存放路径
-5. 在项目的根目录下运行 `python main.py` 或 `python3 main.py`
-6. 其他
+1. 克隆本仓库或从 [releases](https://github.com/Jacken-Wu/Erling-qq-botpy/releases) 下载压缩包并解压
+2. 安装 Python3
+3. 安装依赖：`pip install -r requirements.txt`
+4. 申请 [QQ 机器人](https://q.qq.com/#/app/bot)，并获得 `token`
+5. 将 `config.example.yaml` 复制为 `config.yaml`，并修改其中相应的配置项，其中 `data_path` 为数据文件存放路径
+6. 在项目的根目录下运行 `python main.py` 或 `python3 main.py`
+7. 其他
     - 你的 `data_path` 下的 `chat/trainning/text/` 中可添加文本，用于生成词向量，具体示例见其中的参考文件
     - 你的 `data_path` 下的 `chat/trainning/conversation/` 中可添加对话语料，用于生成对话数据集，具体示例见其中的参考文件
     - 可以运行 `generate_conversation.py` 生成词向量或对话数据集（需解除该文件中对应的注释）
